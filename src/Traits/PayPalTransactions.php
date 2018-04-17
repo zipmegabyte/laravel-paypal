@@ -35,6 +35,7 @@ trait PayPalTransactions
             'REFERENCEID'   => $transaction,
             'PAYMENTACTION' => $action,
             'AMT'           => $amount,
+            'CURRENCYCODE'  => $this->currency,
         ]);
 
         return $this->doPayPalRequest('DoReferenceTransaction');

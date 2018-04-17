@@ -328,7 +328,7 @@ trait PayPalRequest
             'USER'      => $this->config['username'],
             'PWD'       => $this->config['password'],
             'SIGNATURE' => $this->config['signature'],
-            'VERSION'   => 123,
+            'VERSION'   => 204,
             'METHOD'    => $method,
         ], $this->options);
 
