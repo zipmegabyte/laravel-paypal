@@ -86,7 +86,7 @@ class ExpressCheckout
     protected function setExpressCheckoutRecurringPaymentConfig($data, $subscription = false)
     {
         $this->post = $this->post->merge([
-            'L_BILLINGTYPE0'                 => ($subscription) ? 'RecurringPayments' : 'MerchantInitiatedBilling',
+            'L_BILLINGTYPE0'                 => ($subscription) ? 'RecurringPayments' : 'MerchantInitiatedBillingSingleAgreement',
             'L_BILLINGAGREEMENTDESCRIPTION0' => !empty($data['subscription_desc']) ?
                 $data['subscription_desc'] : $data['invoice_description'],
         ]);
